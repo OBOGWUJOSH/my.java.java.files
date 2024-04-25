@@ -1,0 +1,18 @@
+//multiplication table
+
+
+public class MultiplicationTable{
+public static void main(String[] args){
+
+
+	for (int x = 1; x <=12; x++){
+
+	System.out.printf("%d%d%d",1,"x", x, "=", x * 1);
+	
+	}
+
+} 
+
+
+}
+
