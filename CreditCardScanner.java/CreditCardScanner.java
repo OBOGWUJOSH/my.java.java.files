@@ -9,6 +9,7 @@ import java.util.Scanner;
 	int count = 0;
 	
 	int counter = 0;
+	int counter2 = 0;
 
 	int lengthOfString = 0;
 
@@ -17,9 +18,14 @@ import java.util.Scanner;
 	int stringtoIndex0 = 0;
 	
 	int stringtoIndex1 = 0;
+
+	int calcDoubleNumber = 0;
+
+	int sumOfDoubledNumber8 = 0;
+	int sumOfOddNumbers8 = 0;
 	
 
-		System.out.println("Kindly input your creditcard number for Validation:  ");
+		System.out.println("Kindly input your Card details for Validation:  ");
 		creditcardnumber = input.nextLine();
 
 
@@ -55,36 +61,38 @@ import java.util.Scanner;
 		}count++;
 			
 		
-
+System.out.println("*************************************************************************************************************************************");
 
 
 			if (stringtoIndex0 == 4){
 
-				System.out.printf("Credit Card Type: "+"Visa Card.");
+				System.out.println("***Card Type: "+"Visa Card.");
 			}
 
 			else
 			if (stringtoIndex0 == 5){
 
-				System.out.printf("Credit Card Type: "+"Master Card.");
+				System.out.println("***Card Type: "+"Master Card.");
 			}
 
 			else
 			if (stringtoIndex0 == 6){
 
-				System.out.printf("Credit Card Type: "+"Discover Card.");
+				System.out.println("***Card Type: "+"Discover Card.");
 			}
 
 			else
 			if (stringtoIndex0 == 3 && stringtoIndex1 == 7){
 
-				System.out.printf("Credit Card Type: "+"American Express Card.");
+				System.out.println("Card Type: "+"American Express Card.");
 			}	
 
-			else {System.out.printf("Credit Card Type: "+"Invalid card.");}
+			else {System.out.printf("Card Type: "+"Invalid card.");}
 
 
 
+
+		System.out.println(creditcardnumber);
 
 
 		int sumOfCardNumber = 0;
@@ -100,43 +108,85 @@ import java.util.Scanner;
 
 
 
-		for (int x = lengthOfString - 1 ; x >= 0; x-=2){
 
 
-			stringtoIndex12[x] = creditcardnumber.charAt(x) - '0';
-			stringtoIndex15[x] = creditcardnumber.charAt(x) - '0';
-
-		}count++;
 
 
-		//System.out.println(Arrays.toString(stringtoIndex12));
 
+
+
+		for (int x = lengthOfString-2 ; x >= 0; x-=2){
+			
+
+			stringtoIndex12[counter] = creditcardnumber.charAt(x) - '0';
+			counter+=1;
+
+		}
+
+
+
+		for (int x = lengthOfString-1; x >= 0; x-=2){
+
+			stringtoIndex15[counter2] = creditcardnumber.charAt(x) - '0';
+			counter2+=1;
+			
+		}
+			
 
 
 
 
 		
-		for (int x = 0 ; x < lengthOfString; x++){
 
+
+
+
+		for (int x = 0 ; x < lengthOfString; x++){
+		
 			multiplicationOfstringtoIndex12[x] = stringtoIndex12[x] *2 ;
-			multiplicationOfstringtoIndex15[x] = stringtoIndex15[x] *2 ;
+			multiplicationOfstringtoIndex15[x] = stringtoIndex15[x];
 
 			}counter++;
 
 
-		System.out.println(Arrays.toString(multiplicationOfstringtoIndex12));
-	
-	
 
 
 
 
 
-		
-		//System.out.println(stringtoNumber0);
-		//System.out.println(stringtoNumber1);
-		//System.out.println(Arrays.toString(ArrayOfcreditcardnumber));
 
+
+
+		for (int x = 0 ; x < lengthOfString; x++){
+
+			
+			if (multiplicationOfstringtoIndex12[x] > 9){
+
+			sumOfDoubledNumber8 += (multiplicationOfstringtoIndex12[x] - 10) + 1;
+
+			}
+
+
+
+		}
+
+
+
+		for (int x = 0; x < lengthOfString; x++){
+
+			sumOfOddNumbers8 += multiplicationOfstringtoIndex15[x] + 0;
+
+			}
+
+
+
+
+
+
+		if ((sumOfDoubledNumber8 + sumOfOddNumbers8)/10 == 0){
+
+		System.out.println("This is a valid");
+		}else {System.out.println("This is not valid");}
 
 
 

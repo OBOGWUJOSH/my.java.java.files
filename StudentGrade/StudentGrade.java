@@ -11,12 +11,20 @@ public static void main(String[] args){
 
 	int count = 0;
 
-	System.out.print("Number Of Students in class: ");
+	System.out.println("How many Students Do You Have: ");
 	int numberOfStudent = input.nextInt();
 
-	System.out.print("Number Of Subjects : ");
+	System.out.println("How many Subjects Do You Offer : ");
 	int numberOfSubject = input.nextInt();
-	System.out.println("\n");
+	System.out.println(" ");
+
+	System.out.println("Saving >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+	System.out.println("Saved Successfully");
+	System.out.println(" ");
+
+	
+
+	
 
 	
 	String nameOfStudent = null;
@@ -27,6 +35,8 @@ public static void main(String[] args){
 	String [] arrNameOfStudents = null;
 	String [] arrNameOfSubjects = null;
 	int [] arrStudentScores = null;
+	int sum = 0;
+	int SUB = 0 ;
 
 
 		arrNumberOfStudents = new int [numberOfStudent];
@@ -38,92 +48,100 @@ public static void main(String[] args){
 
 		
 	for(int x = 0; x < numberOfStudent; x++){
-			System.out.println("Enter name of Student: " );
+
+		
+
+			/*System.out.println("Enter name of Student: " );
 			nameOfStudent = input.next();
-			arrNameOfStudents[0] = nameOfStudent;
+			arrNameOfStudents[0] = nameOfStudent;*/
 
-
-			System.out.println("\n");
 
 
 
 
 		for(int counter = 0; counter < numberOfSubject; counter++){
 
-			System.out.print("Enter Name of Subject: " );
+			/*System.out.print("Name of Subject: " );
 			nameOfSubject = input.next();
-			arrNameOfSubjects[counter] = nameOfSubject;
+			arrNameOfSubjects[counter] = nameOfSubject;*/
 			
 
-		
-
-			System.out.print("Enter Students score : " );
+			System.out.print("Students score : ");
 			studentScore = input.nextInt();
-			arrStudentScores[counter] = studentScore;
-	
 
 
 				if (studentScore < 0 || studentScore > 100) {
 				System.out.println("!!!! Illegal Student Score please Try again !!!!");
 				}
+
+
+
+			arrStudentScores[x] = studentScore;
+			sum += arrStudentScores[x];
 			
+
+
 		System.out.println("\n");
 		}
 
 
 
-
-
-
-
-		System.out.println(nameOfStudent);
-
-		System.out.println(Arrays.toString(arrNameOfSubjects));
-
-		System.out.println(Arrays.toString(arrStudentScores));
-
-		System.out.println("\n");
-
 	}
 
 
 
-	
-
-
-
-	
-
-System.out.println("=======================================================================================================");
+System.out.print("=======================================================================================================");
 System.out.print("\n");
 
-System.out.printf("%s\t\t%s\t%s\t%s\t%s\t%s\t%s\t\n", "STUDENT","SUB1","SUB2","SUB3","TOT","AVE","POS");
 
 
-System.out.println("======================================================================================================");
+
+	System.out.print ("STUDENT"\t); for (int x = 1; x < numberOfSubject; x++){
+
+					
+				}
+
+
+
+
+System.out.print("======================================================================================================");
+
 System.out.println("\n");
- 
+
+
+
 
 for (int y = 0; y < numberOfStudent; y++){
+		
+		
+	for (int x = 0; y < numberOfStudent; y++){
 
-System.out.printf("%s\t\t %d\t %d\t %d\t", arrNameOfStudents[y],arrStudentScores[0],arrStudentScores[1],arrStudentScores[2]);
-System.out.println("\n");
+
+		//System.out.printf("%s\t\t %d\t%d\t%d\t\t",arrNameOfStudents[y],arrStudentScores[y],arrStudentScores[y]);
+
+
+	}
 
 }
 
 
 
 
-
-
 System.out.println("======================================================================================================");
 System.out.println("\n");
 
 
-	
 
 
-	
+
+
+		/*System.out.println(nameOfStudent);
+
+		System.out.println(Arrays.toString(arrNameOfSubjects));
+
+		System.out.println(Arrays.toString(arrStudentScores));
+
+		System.out.println("\n");*/
 
 
 
@@ -137,17 +155,6 @@ System.out.println("\n");
 		//System.out.println("\n");
 
 
-
-	
-
-
-
-	
-
-
-		
-	//System.out.print(NumberOfStudents);
-	//System.out.println(Arrays.toString(numberOfStudents));
 
 
 
