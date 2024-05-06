@@ -12,101 +12,106 @@ public static void main(String[] args){
 	Scanner input = new Scanner(System.in);
 
 	
-	int [] price = new int [4];
 
-	price[0] = 2000; //SapaSize
-	price[1] = 2400; //SmallMoneySize
-	price[2] = 3000; //BigBoysSize
-	price[3] = 4200; //OdogwuSize
+	int price0 = 2000; //SapaSize
+	int price1 = 2400; //SmallMoneySize
+	int price2 = 3000; //BigBoysSize
+	int price3 = 4200; //OdogwuSize
 
 
-	int [] slices = new int [4];
 
-	slices [0] = 4; //SapaSize
-	slices [1] = 6; //SmallMoneySize
-	slices [2] = 8; //BigBoysSize
-	slices [3] = 12; //OdogwuSize
+	int slices0 = 4; //SapaSize
+	int slices1 = 6; //SmallMoneySize
+	int slices2 = 8; //BigBoySize
+	int slices3 = 12; //OdogwuSize
+
+
+	String nameOfPizzas0 = "Sapa Size"; //SapaSize
+	String nameOfPizzas1 = "Small Money Size"; //SmallMosneySize
+	String nameOfPizzas2 = "Big Boy Size"; //BigBoysSize
+	String nameOfPizzas3 = "ODOGWU Size"; //OdogwuSize
+
 
 	int typeOfPizza = 0;
+	int priceOfPizza = 0;
+	String nameOfPizza = new String();
 	int slicePerPizza = 0;
+	int remainingPizza = 0;
 	int count = 0;
-
-
-
+	
+	
 
 
 	System.out.println("Customers Name: ");
 	String userName  = input.nextLine();
 
-	System.out.println("number of guests: ");
+	System.out.println("Number of Guests: ");
 	int numberOfGuests  = input.nextInt();
 	
 	System.out.println("press 1 for Sapa Size");
 	System.out.println("press 2 for Small Money Size");
 	System.out.println("press 3 for BIG BOYS Size");
 	System.out.println("press 4 for ODOGWU Size");
+	System.out.println("\n");
 
-	
 
-
-		System.out.println("Type of pizza: ");
+		System.out.print("Type of pizza: ");
 		typeOfPizza  = input.nextInt();
 		
 
 		if (typeOfPizza == 1){
 			
-			typeOfPizza = slices[0];
-			//System.out.println(slices[0]);
-		}
-		else 
+			nameOfPizza = nameOfPizzas0;
+			slicePerPizza = slices0;
+			priceOfPizza = price0;
+		}else 
 		if (typeOfPizza == 2){
 
-			typeOfPizza = slices[1];
-			//System.out.println(slices[1]);
+			nameOfPizza = nameOfPizzas1;
+			slicePerPizza = slices1;
+			priceOfPizza = price1;
 		
-		}	
-		else
-		if (typeOfPizza == 3){
-			
-			typeOfPizza = slices[2];
-			//System.out.println(slices[2]);
-					
 		}else 
+		if (typeOfPizza == 3){
+
+			
+			nameOfPizza = nameOfPizzas2;
+			slicePerPizza = slices2;
+			priceOfPizza = price2;
+			
+					
+		}else
 		if (typeOfPizza == 4){
 
-			typeOfPizza = slices[3];
-			System.out.println(slices[3]);
+			nameOfPizza = nameOfPizzas3;
+			slicePerPizza = slices3;
+			priceOfPizza = price3;
+			
 		
-		}
-		else System.out.println("!!!!Not a pizza type TRY AGAIN");
-	
+		}else System.out.println("!!!!Not a pizza type TRY AGAIN");
 
-		//Ask dayo how to make this code repeat when there is a wrong input prompt
+
+
+//Ask how to make this code repeat when there is a wrong input prompt
+
+
+
+	double numberOfboxesFloat = (double) numberOfGuests / slicePerPizza;
+	int numberOfboxesWhole = numberOfGuests / slicePerPizza;
+	double pizzaToAddTo = numberOfGuests - (slicePerPizza * numberOfboxesWhole);
+	int numberOfBoxesNeeded = numberOfboxesWhole + 1;
+	int remainingPizzaSlice = slicePerPizza * numberOfBoxesNeeded  - numberOfGuests;
+	double Price = numberOfBoxesNeeded * priceOfPizza;
 
 		
-	System.out.println("number of boxes: ");
-	int numbersOfBoxes  = input.nextInt();
 
 
-
-
-
-
-	//System.out.println(Arrays.toString(price));
-	//System.out.println(Arrays.toString(slices));
-
-
-	int numberOfSlices = numbersOfBoxes * typeOfPizza;
-
-	if 
-	int remainingPitza = numberOfSlices - numberOfGuests;
-
-
-	
-	System.out.println("Number of slices in "+ numbersOfBoxes + " boxes of pizza is : " +    numberOfSlices);
-	System.out.println("you have " + remainingPitza + " remaining slices of pizza");
-
-
+	// System.out.println(typeOfPizza);
+	System.out.println(nameOfPizza);
+	//System.out.println(priceOfPizza);
+	System.out.println("Number of boxes of pizza to buy = " + numberOfBoxesNeeded);
+	System.out.println("Number of left over slices after serving = "+ remainingPizzaSlice);	
+	System.out.println("Price = "+Price);
 
 
 
