@@ -128,12 +128,6 @@ System.out.println("------------------------------------------------------------
 		System.out.printf("\t\t\t\t%s\t%.2f%n", "Discount:", discounted );
 		
 
-
-
-
-
-
-
 System.out.println("==================================================================================");
 
 		System.out.println(Arrays.toString(itemBoughtA));
@@ -144,11 +138,7 @@ System.out.println("============================================================
 
 		System.out.println(Arrays.toString(howMuchPerUnitA));
 
-
-
-
 System.out.println("----------------------------------------------------------------------------------");
-
 
 
 
